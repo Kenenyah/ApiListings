@@ -1,0 +1,1159 @@
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <!-- <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <!-- Imports -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="bootstrap" viewBox="0 0 118 94">
+            <title>Bootstrap</title>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z">
+            </path>
+        </symbol>
+        <symbol id="facebook" viewBox="0 0 16 16">
+            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+        </symbol>
+        <symbol id="instagram" viewBox="0 0 16 16">
+            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+        </symbol>
+        <symbol id="twitter" viewBox="0 0 16 16">
+            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+        </symbol>
+    </svg>
+
+
+    <style>
+        #prev, #next {
+            color: #fff;
+            background-color: #0d6efd;
+            border-color: #0d6efd;
+            padding: 5px;
+            border-radius: 8px;
+            width: 50px;
+        }
+        /* body {
+            font-size: 140%;
+        } */
+
+        /* h2 {
+            text-align: center;
+            padding: 20px 0;
+        } */
+        ul.pagination-items {
+            list-style: none;
+        }
+        .carouselImage{
+            cursor:pointer;
+        }
+
+        ul.pagination-items li {
+            display: inline-block;
+            border: 1px solid #d0d0ce;
+            padding: 5px 10px;
+            margin: 1px 3px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        li.pagination-item.active {
+            background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
+            color: #fff;
+            border: 1px solid linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
+            cursor: default;
+        }
+
+        li.disabled-item {
+            opacity: 0.4;
+            background: #d0d0ce;
+            pointer-events: none;
+        }
+
+        ul.pagination-items li:hover {
+            color: #fff;
+            background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
+        }
+    </style>
+
+    <!-- Custom styles for this template -->
+    <link href="listings.css" rel="stylesheet">
+
+    <style id="" media="all">
+        .nav-link
+        {
+            font-weight:bold;
+        }
+        /* devanagari */
+        @font-face {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://fonts.gstatic.com/s/poppins/v19/pxiEyp8kv8JHgFVrJJbecmNE.woff2) format('woff2');
+            unicode-range: U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://fonts.gstatic.com/s/poppins/v19/pxiEyp8kv8JHgFVrJJnecmNE.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://fonts.gstatic.com/s/poppins/v19/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* devanagari */
+        @font-face {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            src: url(https://fonts.gstatic.com/s/poppins/v19/pxiByp8kv8JHgFVrLEj6Z11lFc-K.woff2) format('woff2');
+            unicode-range: U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            src: url(https://fonts.gstatic.com/s/poppins/v19/pxiByp8kv8JHgFVrLEj6Z1JlFc-K.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            src: url(https://fonts.gstatic.com/s/poppins/v19/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* devanagari */
+        @font-face {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            src: url(https://fonts.gstatic.com/s/poppins/v19/pxiByp8kv8JHgFVrLCz7Z11lFc-K.woff2) format('woff2');
+            unicode-range: U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            src: url(https://fonts.gstatic.com/s/poppins/v19/pxiByp8kv8JHgFVrLCz7Z1JlFc-K.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            src: url(https://fonts.gstatic.com/s/poppins/v19/pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+        #carousel {
+            position: relative;
+            height:300px;
+            top: 50%;
+            /*transform: translateY(-50%);*/
+            overflow: hidden;
+        }
+
+            #carousel div {
+                position: absolute;
+                transition: transform 1s, left 1s, opacity 1s, z-index 0s;
+                opacity: 1;
+            }
+
+                #carousel div img {
+                    width: 400px;
+                    transition: width 1s;
+                }
+
+                #carousel div.hideLeft {
+                    left: 0%;
+                    opacity: 0;
+                    transform: translateY(50%) translateX(-50%);
+                }
+
+                    #carousel div.hideLeft img {
+                        width: 200px;
+                    }
+
+                #carousel div.hideRight {
+                    left: 100%;
+                    opacity: 0;
+                    transform: translateY(50%) translateX(-50%);
+                }
+
+                    #carousel div.hideRight img {
+                        width: 200px;
+                    }
+
+                #carousel div.prev {
+                    z-index: 5;
+                    left: 30%;
+                    transform: translateY(50px) translateX(-50%);
+                }
+
+                    #carousel div.prev img {
+                        width: 300px;
+                    }
+
+                #carousel div.prevLeftSecond {
+                    z-index: 4;
+                    left: 15%;
+                    transform: translateY(50%) translateX(-50%);
+                    opacity: 0.7;
+                }
+
+                    #carousel div.prevLeftSecond img {
+                        width: 200px;
+                    }
+
+                #carousel div.selected {
+                    z-index: 10;
+                    left: 50%;
+                    transform: translateY(0px) translateX(-50%);
+                }
+
+                #carousel div.next {
+                    z-index: 5;
+                    left: 70%;
+                    transform: translateY(50px) translateX(-50%);
+                }
+
+                    #carousel div.next img {
+                        width: 300px;
+                    }
+
+                #carousel div.nextRightSecond {
+                    z-index: 4;
+                    left: 85%;
+                    transform: translateY(50%) translateX(-50%);
+                    opacity: 0.7;
+                }
+
+                    #carousel div.nextRightSecond img {
+                        width: 200px;
+                    }
+
+        .buttons {
+        
+            bottom: 10px;
+        }
+        @media (min-width: 576px) {
+            .modal-dialog {
+                max-width: 98%;
+                margin: 1.75rem auto;
+            }
+        }
+    </style>
+    <link href="main.css" rel="stylesheet" />
+    <meta name="robots" content="noindex, follow">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-23581568-13');
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                        fill="currentColor" class="bi bi-house-heart" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.707L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.646a.5.5 0 0 0 .708-.707L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207l-5-5-5 5V13.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7.207Zm-5-.225C9.664 5.309 13.825 8.236 8 12 2.175 8.236 6.336 5.309 8 6.982Z" />
+                    </svg></i></a>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="listings.html">Listings</a>
+                        <a class="nav-link" href="#">Pricing</a>
+                        <a class="nav-link" href="#Contact">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        //(function (w, d) {
+        //    ! function (a, e, t, r, z) {
+        //        a.zarazData = a.zarazData || {}, a.zarazData.executed = [], a.zarazData.tracks = [], a.zaraz = {
+        //            deferred: []
+        //        };
+        //        var s = e.getElementsByTagName("title")[0];
+        //        s && (a.zarazData.t = e.getElementsByTagName("title")[0].text), a.zarazData.w = a.screen.width, a
+        //            .zarazData.h = a.screen.height, a.zarazData.j = a.innerHeight, a.zarazData.e = a.innerWidth, a
+        //            .zarazData.l = a.location.href, a.zarazData.r = e.referrer, a.zarazData.k = a.screen.colorDepth,
+        //            a.zarazData.n = e.characterSet, a.zarazData.o = (new Date).getTimezoneOffset(), a.dataLayer = a
+        //            .dataLayer || [], a.zaraz.track = (e, t) => {
+        //                for (key in a.zarazData.tracks.push(e), t) a.zarazData["z_" + key] = t[key]
+        //            }, a.zaraz._preSet = [], a.zaraz.set = (e, t, r) => {
+        //                a.zarazData["z_" + e] = t, a.zaraz._preSet.push([e, t, r])
+        //            }, a.dataLayer.push({
+        //                "zaraz.start": (new Date).getTime()
+        //            }), a.addEventListener("DOMContentLoaded", (() => {
+        //                var t = e.getElementsByTagName(r)[0],
+        //                    z = e.createElement(r);
+        //                z.defer = !0, z.src = "https://cdn-cgi/zaraz/s.js?z=" + btoa(encodeURIComponent(JSON
+        //                    .stringify(a.zarazData))), t.parentNode.insertBefore(z, t)
+        //            }))
+        //    }(w, d, 0, "script");
+        //})(window, document);
+    </script>
+        <div class="modal" id="DetailsModal" tabindex="-1">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Property Details</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="carousel">
+
+                            <div class="hideLeft">
+                                <img src="https://i1.sndcdn.com/artworks-000165384395-rhrjdn-t500x500.jpg">
+                            </div>
+
+                            <div class="prevLeftSecond">
+                                <img src="https://i1.sndcdn.com/artworks-000185743981-tuesoj-t500x500.jpg">
+                            </div>
+
+                            <div class="prev">
+                                <img src="https://i1.sndcdn.com/artworks-000158708482-k160g1-t500x500.jpg">
+                            </div>
+
+                            <div class="selected">
+                                <img src="https://i1.sndcdn.com/artworks-000062423439-lf7ll2-t500x500.jpg">
+                            </div>
+
+                            <div class="next">
+                                <img src="https://i1.sndcdn.com/artworks-000028787381-1vad7y-t500x500.jpg">
+                            </div>
+
+                            <div class="nextRightSecond">
+                                <img src="https://i1.sndcdn.com/artworks-000108468163-dp0b6y-t500x500.jpg">
+                            </div>
+
+                            <div class="hideRight">
+                                <img src="https://i1.sndcdn.com/artworks-000064920701-xrez5z-t500x500.jpg">
+                            </div>
+
+                        </div>
+
+                        <div class="mt-2 mb-2">
+                            <button id="prev"  class="btn btn-primary" style="margin-left:40%;">Prev</button>
+                            <button id="next"  class="btn btn-primary" >Next</button>
+                        </div>
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr>
+                                    <td width="30%">Public Remarks</td>
+                                    <td id="PublicRemarks"></td>
+                                </tr>
+                                <tr>
+                                    <td width="30%">Appliances</td>
+                                    <td id="Appliances"></td>
+                                </tr>
+                                <tr>
+                                    <td width="30%">Association Amenities</td>
+                                    <td id="AssociationAmenities"></td>
+                                </tr>
+                                <tr>
+                                    <td width="30%">Interior Features</td>
+                                    <td id="InteriorFeatures"> id=""td>
+                                </tr>
+                                <tr>
+                                    <td width="30%">Living Area</td>
+                                    <td id="LivingArea"></td>
+                                </tr>
+                                <tr>
+                                    <td width="30%">Pet Restrictions</td>
+                                    <td id="MFR_PetRestrictions"></td>
+                                </tr>
+                                <tr>
+                                    <td width="30%">Pet Size</td>
+                                    <td id="MFR_PetSize"></td>
+                                </tr>
+                                <tr>
+                                    <td width="30%">Listing Id</td>
+                                    <td id="ListingId"></td>
+                                </tr>
+                                <tr>
+                                    <td width="30%">Year Built</td>
+                                    <td id="YearBuilt"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                 
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row mt-5">
+                <div class="col-md-8 col-lg-9">
+                    <div id="cardData" class="row mt-4"></div>
+                </div>
+                <div class="col-md-4 col-lg-3 ">
+                    <div class="s010">
+                    <form>
+                        <div class="inner-form">
+                            <div class="basic-search">
+                                <div class="input-field">
+                                    <div class="icon-wrap">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                            <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="advance-search d-none" id="SearchBlock">
+                                <span class="desc">SEARCH</span>
+                                <div class="row mb-0">
+                                    <div class="input-field mb-2">
+                                        <label>State</label>
+                                        <div class="input-select">
+                                            
+                                            <select data-trigger="" id="StatesOptions">
+                                                <option value=""></option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="input-field mb-2">
+                                        <label>City</label>
+                                        <div class="input-select">
+                                            <select data-trigger="" id="CityOptions">
+                                                <option value=""></option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="input-field mb-2">
+                                        <label>Bathrooms</label>
+
+                                        <div class="input-select">
+                                            <input type="number" id="inputBathrooms" name="Bathrooms" value="2">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 second">
+                                    <div class="input-field mb-2">
+                                        <label>Bedrooms</label>
+                                        <div class="input-select">
+                                            <input type="number" id="inputBedrooms" name="Bedrooms"  value="2">
+                                        </div>
+                                    </div>
+                                    <div class="input-field mb-2">
+                                        <label>Carport</label>
+                                        <div class="input-select">
+                                            <select data-trigger="" id="ddlCarport">
+                                                <option placeholder="" value="">Select : yes, no</option>
+                                                <option value="true">Yes</option>
+                                                <option value="false">No</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="input-field mb-2">
+                                        <label>Pets Allowed</label>
+                                        <div class="input-select">
+                                            <select data-trigger="" id="ddlPets">
+                                                <option placeholder="" value="">Select : yes, no</option>
+                                                <option value="Yes">Yes</option>
+                                                <option value="No">No</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 third pb-4">
+                                    <div class="input-field">
+
+                                        <div class="group-btn" style="float:right;">
+                                            <button class="btn-delete" id="delete">RESET</button>
+                                            <button id="search" type="button" class="btn-search">SEARCH</button>
+                                        </div>
+                                      
+                                    </div>
+                                    <div class="">
+                                        <div class="result-count w-50 pt-2" id="spnResults">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+                </div>
+            </div>
+
+            <div class="user-data"></div>
+            <ul class="pagination-items"></ul>
+        </div>
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="bi bi-arrow-up-circle"></i></button>
+        <script src="choices.js"></script>
+        <script>
+            var nf = Intl.NumberFormat();
+            var arrayItems = [];
+            $(document).ready(function () {
+                $(document).on("click", ".carouselImage", function () {
+                    var src = this.src;
+                    openImage(src);
+                });
+                $(document).on("click", ".detailsBtn", function () {
+                    var id = $(this).attr("data-id");
+                    var selectedItem = arrayItems.filter(x => x.ListingId == id);
+
+                    document.getElementById("PublicRemarks").innerHTML = (selectedItem[0].PublicRemarks == undefined ? "" : selectedItem[0].PublicRemarks);
+                    document.getElementById("Appliances").innerHTML = (selectedItem[0].Appliances == undefined ? "" : selectedItem[0].Appliances);
+                    document.getElementById("AssociationAmenities").innerHTML = (selectedItem[0].AssociationAmenities == undefined ? "" : selectedItem[0].AssociationAmenities);
+                    document.getElementById("InteriorFeatures").innerHTML = (selectedItem[0].InteriorFeatures == undefined ? "" : selectedItem[0].InteriorFeatures);
+                    document.getElementById("LivingArea").innerHTML = (selectedItem[0].LivingArea == undefined ? "" : selectedItem[0].LivingArea);
+                    document.getElementById("MFR_PetRestrictions").innerHTML = (selectedItem[0].MFR_PetRestrictions == undefined ? "" : selectedItem[0].MFR_PetRestrictions);
+                    document.getElementById("MFR_PetSize").innerHTML = (selectedItem[0].MFR_PetSize == undefined ? "" : selectedItem[0].MFR_PetSize);
+                    document.getElementById("ListingId").innerHTML = (selectedItem[0].ListingId == undefined ? "" : selectedItem[0].ListingId);
+                    document.getElementById("YearBuilt").innerHTML = (selectedItem[0].YearBuilt == undefined ? "" : selectedItem[0].YearBuilt);
+                    $("#carousel").html("");
+                    for (var i = 0; i < selectedItem[0].Media.length; i++) {
+                        var MediaURL = selectedItem[0].Media[i].MediaURL;
+                        if (i == 0) {
+                            $("#carousel").append(`  <div class="selected">
+                                <img class="carouselImage" alt="Click to See" src="${MediaURL}">
+                            </div>`);
+                        }
+                        else if (i == 1) {
+                            $("#carousel").append(`  <div class="next">
+                                <img class="carouselImage" src="${MediaURL}">
+                            </div>`);
+                        }
+                        else if (i == 2) {
+
+                            $("#carousel").append(`  <div class="nextRightSecond">
+                                <img class="carouselImage" src="${MediaURL}">
+                            </div>`);
+                        }
+                        else {
+                            $("#carousel").append(`  <div class="hideRight">
+                                <img class="carouselImage" src="${MediaURL}">
+                            </div>`);
+                        }
+                    
+
+                    }
+                    $("#DetailsModal").modal("show");
+                });
+                $("#delete").click(function () {
+                    FillCards(arrayItems, "");
+                    document.getElementById("spnResults").innerHTML = ``;
+
+                });
+                $("#search").click(function () {
+                    var ListPrice = document.getElementById("ListPrice").value;
+                    var CityOptions = document.getElementById("CityOptions").value;
+                    var StatesOptions = document.getElementById("StatesOptions").value;
+                    var inputBathrooms = document.getElementById("inputBathrooms").value;
+                    var inputBedrooms = document.getElementById("inputBedrooms").value;
+                    var ddlPets = document.getElementById("ddlPets").value;
+                    var ddlCarport = document.getElementById("ddlCarport").value;
+                    var carpotValue = (ddlCarport=="false"?false:true);
+                    var arrayFilter = arrayItems.filter(x => x.StateOrProvince == StatesOptions && x.City == CityOptions && x.BathroomsTotalInteger >= inputBathrooms && x.BedroomsTotal >= inputBedrooms && x.CarportYN == carpotValue && x.PetsAllowed == ddlPets);
+                    document.getElementById("spnResults").innerHTML = `<span>${arrayFilter.length}</span> Results`;
+                    FillCards(arrayFilter,"filter");
+
+                });
+                function openImage(url) {
+                    window.open(url,"_blank")
+                }
+                function drawCard(state, city, price, img, sqft, bath, bed, ID) {
+                    var defaultIMG = "...";
+                    return `<div class="col-xs-12 col-md-6 col-lg-4 mb-3">
+                                    <div class="card">
+                                    <div class="card_image"  style="width: 100%; height: 14rem;">
+                                <img src='${img}'></div>
+                                <div class="card_content">
+                                        <h2 class="card_title">${city},${state}</h2>
+                                        <ul style="list-style: none;">
+                                        <li class="card_text" style="margin-top: 5px; margin-left: -30px;">Price: $${nf.format(price)}</li>
+                                        <li class="card_text" style="margin-top: -20px; margin-left: -30px;">Sqft: ${(sqft)}</li>
+                                        <li class="card_text" style="margin-top: -20px; margin-left: -30px;">Full Bathrooms: ${(bath)}</li>
+                                        <li class="card_text" style="margin-top: -20px; margin-left: -30px;">Bedrooms: ${(bed)}</li>
+
+                                        </ul>
+                                        <button class="btn card_btn detailsBtn" data-id="${ID}">Click for More</button>
+                                    </div>
+                                    </div>
+                                </div>`;
+                }
+                // $.ajaxSetup({
+                //     headers: {
+                //         'Authorization': "Bearer 214bf900eb0a5ec807993d227fa3e43a73206dba"
+                //     }
+                // });
+                /// that code just for call api and get data
+                //https://api.mlsgrid.com/v2/Property?$filter=OriginatingSystemName&$expand=Media&$top=10
+                $.get(`https://api.bridgedataoutput.com/api/v2/OData/test/Property?access_token=51ae0cdbbb5d15fecdbb6d6cd3e8bc36&$top=30
+`,
+                    function (data) {
+                        arrayItems = data.value;
+                        FillCards(arrayItems);
+                    });
+                function FillCards(arrayItems, OptionType="") {
+                    if (OptionType !== "filter") {
+                        var b_col = arrayItems.map(x => x.City); // [2,4,6]
+                        let CitiesList = document.getElementById('CityOptions').options;
+                        b_col = b_col.filter(function (value, index, array) {
+                            return array.indexOf(value) === index;
+                        });
+                        b_col.forEach(option =>
+                            CitiesList.add(
+                                new Option(option, option, false)
+                            )
+                        );
+                        var States = arrayItems.map(x => x.StateOrProvince); // [2,4,6]
+                        States = States.filter(function (value, index, array) {
+                            return array.indexOf(value) === index;
+                        });
+                        let StatesOptions = document.getElementById('StatesOptions').options;
+                        States.forEach(option =>
+                            StatesOptions.add(
+                                new Option(option, option, false)
+                            )
+                        );
+                        $("#SearchBlock").removeClass("d-none")
+                    }
+                    const customSelects = document.querySelectorAll("select");
+                    const deleteBtn = document.getElementById('delete')
+                    const choices = new Choices('select', {
+                        searchEnabled: true,
+                        itemSelectText: '',
+                        removeItemButton: true,
+                    });
+                    for (let i = 0; i < customSelects.length; i++) {
+                        customSelects[i].addEventListener('addItem', function (event) {
+                            if (event.detail.value) {
+                                let parent = this.parentNode.parentNode
+                                parent.classList.add('valid')
+                                parent.classList.remove('invalid')
+                            } else {
+                                let parent = this.parentNode.parentNode
+                                parent.classList.add('invalid')
+                                parent.classList.remove('valid')
+                            }
+                        }, false);
+                    }
+                    deleteBtn.addEventListener("click", function (e) {
+                        e.preventDefault()
+                        const deleteAll = document.querySelectorAll('.choices__button')
+                        for (let i = 0; i < deleteAll.length; i++) {
+                            deleteAll[i].click();
+                        }
+                    });
+                    var itemsLength = arrayItems.length;
+                    var numberItemsPerPage = 12;
+                    var paginationItemsLenth = arrayItems.length / 12;
+                    var currentPaginationPosition;
+                    var selectedItemsArr = [1];
+                    var showFrom;
+                    var showTo;
+                    var pageNumber = 1;
+                    var currentPosition = 1;
+                    $("#cardData").html("");
+                    function appendSelectedComments(min, max) {
+                        $("#cardData").html("");
+                        var requireData = arrayItems.slice(min, max);
+                        $.each(requireData, function (index, value) {
+
+                            var item = drawCard(value.StateOrProvince, value.City, value
+                                .ListPrice, value.Media[0].MediaURL, value
+                                .MFR_CalculatedListPriceByCalculatedSqFt, value
+                                .BathroomsFull, value.BedroomsTotal, value.ListingId);
+
+                            $("#cardData").append(item);
+                        });
+                    }
+                    if (itemsLength % 2 !== 0) {
+                        paginationItemsLenth = Math.floor(itemsLength / numberItemsPerPage) + 1;
+                    } else {
+                        paginationItemsLenth;
+                    }
+                    $(".pagination-items").html("");
+
+                    if (arrayItems.length > 0) {
+
+                        $('.pagination-items').append(
+                            '<li item-number="prev" class="pagination-item disabled-item"><<</li>')
+                        for (var i = 0; i < paginationItemsLenth; i++) {
+                            var itemNumber = i + 1;
+
+                            $('.pagination-items').append('<li item-number="' + itemNumber +
+                                '" class="pagination-item list-items">' + itemNumber + '</li>')
+                        }
+                        $('.pagination-items').append('<li item-number="next" class="pagination-item">>></li>')
+                        $('ul.pagination-items li').click(function (e) {
+                            $('ul.user-data li').remove();
+                            $('.pagination-item').removeClass('active')
+                            $('.pagination-item[item-number="prev"]').removeClass('disabled-item')
+                            $('.pagination-item[item-number="next"]').removeClass('disabled-item')
+                            $(this).addClass('active');
+                            pageNumber = $(this).attr('item-number');
+                            if (pageNumber === '1') {
+                                $('.pagination-item[item-number="prev"]').addClass('disabled-item');
+                            } else if (+pageNumber === paginationItemsLenth) {
+                                $('.pagination-item[item-number="next"]').addClass('disabled-item');
+                            }
+                            showFrom = numberItemsPerPage * (pageNumber - 1);
+                            showTo = showFrom + numberItemsPerPage;
+                            appendSelectedComments(showFrom, showTo)
+
+                            $('.pagination-item[item-number="prev"]').unbind('click')
+                            $('.pagination-item[item-number="prev"]').click(function () {
+                                $('ul.user-data li').remove();
+                                currentPosition = parseInt($('li.pagination-item.active').attr(
+                                    'item-number'))
+                                var prevPosiotion = currentPosition - 1;
+                                $('.pagination-item').removeClass('active')
+                                $('.pagination-item[item-number="' + prevPosiotion + '"]').addClass(
+                                    'active')
+                                $('.pagination-item[item-number="' + prevPosiotion + '"]').click()
+                            })
+
+                            $('.pagination-item[item-number="next"]').unbind('click')
+                            $('.pagination-item[item-number="next"]').click(function () {
+                                $('ul.user-data li').remove();
+                                currentPosition = parseInt($('li.pagination-item.active').attr(
+                                    'item-number'))
+                                var nextPosition = currentPosition + 1;
+                                $('.pagination-item').removeClass('active')
+                                $('.pagination-item[item-number="' + nextPosition + '"]').addClass(
+                                    'active')
+                                $('.pagination-item[item-number="' + nextPosition + '"]').click()
+                            })
+                        })
+                        $('.pagination-item:nth-child(2)').addClass('active').click();
+                    }
+                }
+            })
+
+            // POST data to API
+            //$.post(`https://api.mlsgrid.com/v2/Property('MFR1329604')`, {
+            //    name: "",
+            //    age:""
+            //}, function (data) {
+            //    console.log(data);
+            //});
+            //Send Data , Get Data
+        </script>
+        <script>
+            //Get the button:
+            mybutton = document.getElementById("myBtn");
+
+            // When the user scrolls down 60px from the top of the document, show the button
+            window.onscroll = function () {
+                scrollFunction()
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }
+        </script>
+        <style>
+            body {
+                font-family: 'Poppins', Arial, sans-serif;
+                font-size: 15px;
+                line-height: 1.8;
+                font-weight: normal;
+            }
+
+            a {
+                transition: 0.3s all ease;
+            }
+
+                a:hover,
+                a:focus,
+                a:link {
+                    text-decoration: none !important;
+                    outline: none !important;
+                }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            .h1,
+            .h2,
+            .h3,
+            .h4,
+            .h5 {
+                line-height: 1.5;
+                font-weight: 400;
+                font-family: 'Poppins', Arial, sans-serif;
+            }
+
+            .img,
+            .blog-img,
+            .user-img {
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+
+            .ftco-footer-social li {
+                list-style: none;
+                margin: 0 10px 0 0;
+                display: inline-block;
+            }
+
+                .ftco-footer-social li a {
+                    height: 40px;
+                    width: 40px;
+                    display: block;
+                    background: rgba(0, 0, 0, .05);
+                    border-radius: 50%;
+                    position: relative;
+                }
+
+                    .ftco-footer-social li a span {
+                        position: absolute;
+                        font-size: 20px;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+
+                    .ftco-footer-social li a:hover {
+                        color: #fff;
+                    }
+
+            .form-control {
+                height: 52px;
+                background: #fff;
+                color: #000;
+                font-size: 18px;
+                border-radius: 0px;
+                box-shadow: none;
+                border: 1px solid rgba(0, 0, 0, .1);
+            }
+
+                .form-control:focus,
+                .form-control:active {
+                    outline: none !important;
+                    box-shadow: none;
+                }
+
+            textarea.form-control {
+                height: inherit !important;
+            }
+
+            .ftco-section {
+                padding: 12em 0;
+            }
+
+                .ftco-section h2 {
+                    margin-bottom: 0;
+                }
+
+            footer {
+                padding: 7em 0;
+            }
+
+            .footer-10 {
+                background: #222;
+                padding: 0 0 4em 0;
+            }
+
+                .footer-10 .border-top,
+                .footer-10 .border-bottom {
+                    border-color: rgba(255, 255, 255, .1) !important;
+                }
+
+                .footer-10 .footer-heading {
+                    font-size: 18px;
+                    color: #fff;
+                    margin-bottom: 30px;
+                }
+
+                .footer-10 p {
+                    color: rgba(255, 255, 255, .3);
+                }
+
+                .footer-10 a {
+                    color: #1089ff;
+                }
+
+                .footer-10 .con.con-1 {
+                    background: #1c1c1c;
+                }
+
+                .footer-10 .con.con-2 {
+                    background: #1c1c1c;
+                }
+
+                .footer-10 .con.con-3 {
+                    background: #1c1c1c;
+                }
+
+                .footer-10 .list-unstyled li a {
+                    color: rgba(255, 255, 255, .2);
+                }
+
+                    .footer-10 .list-unstyled li a:hover {
+                        color: #fff;
+                    }
+
+                .footer-10 .con-info .icon {
+                    width: 50px;
+                    height: 50px;
+                    background: #1089ff;
+                    border-radius: 50%;
+                    margin: 0 auto;
+                    margin-bottom: 10px;
+                }
+
+                    .footer-10 .con-info .icon span {
+                        color: #fff;
+                        font-size: 24px;
+                    }
+
+                .footer-10 .con-info span {
+                    color: rgba(255, 255, 255, .8);
+                }
+
+                .footer-10 .subheading {
+                    display: inline-block;
+                    margin-top: 5px;
+                    color: rgba(255, 255, 255, .3);
+                    font-size: 13px;
+                }
+
+            .ftco-footer-social li a {
+                background: rgba(255, 255, 255, .1);
+                color: #fff;
+            }
+        </style>
+        <footer class="footer-10">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class=" text col-md-6 text-center">
+                        <h3 style="color: #fff;">Contact Us</h3>
+                    </div>
+                </div>
+            </div>
+            <div id="Contact" class="container">
+                <div class="row mb-5 pb-3 no-gutters">
+                    <div class="col-md-4 mb-md-0 mb-4 d-flex">
+                        <div class="con con-1 w-100 py-5">
+                            <div class="con-info w-100 text-center">
+                                <div class="icon d-flex align-items-center justify-content-center">
+                                    <span class="ion-ios-call">
+                                        <a class="text-light" href="#">
+                                            <i class="bi bi-telephone h4 mx-auto"></i>
+                                        </a>
+                                    </span>
+                                </div> <div class="text">
+                                    <span>
+                                        <a class="text-light" href="#">
+                                            
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-md-0 mb-4 d-flex">
+                        <div class="con con-2 w-100 py-5">
+                            <div class="con-info w-100 text-center">
+                                <div class="icon d-flex align-items-center justify-content-center">
+                                    <span class="ion-ios-mail">
+                                        <a class="text-light"
+                                           href="#">
+                                            <i class="bi bi-envelope h4 mx-auto"></i>
+                                        </a>
+                                    </span>
+                                </div>
+                                <div class="text">
+                                    <span>
+                                        <a class="text-light"
+                                           href="#"></i> </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-md-0 mb-4 d-flex">
+                        <div class="con con-3 w-100 py-5">
+                            <div class="con-info w-100 text-center">
+                                <div class="icon d-flex align-items-center justify-content-center">
+                                    <span class="ion-ios-pin">
+                                        <a class="text-light" target="_blank"
+                                           href="#">
+                                            <i class="bi bi-geo-alt h4 mx-auto"></i>
+                                        </a>
+                                    </span>
+                                </div>
+                                <div class="text">
+                                    <span>
+                                        <a class="text-light" target="_blank"
+                                           href="#">
+                                            
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5 pt-4 border-top">
+                    <div class="col-md-7">
+                        <div class="row">
+                            <div class="col-md-4 mb-md-0 mb-4">
+                                <h2 class="footer-heading">Follow us</h2>
+                                <div class="col-md-3 col-lg-2 col-xl-2 mt-1">
+                                    <a href="#">
+                                        <i class="bi bi-facebook h2 text-light"></i>
+                                    </a>
+                                </div>
+
+                            </div>
+                            <!-- <div class="col-md-4 mb-md-0 mb-4">
+                            <h2 class="footer-heading">Company</h2>
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="d-block">Our services</a></li>
+                                <li><a href="#" class="d-block">Clients</a></li>
+                                <li><a href="#" class="d-block">Contact</a></li>
+                                <li><a href="#" class="d-block">Press</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 mb-md-0 mb-4">
+                            <h2 class="footer-heading">Resources</h2>
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="d-block">Blog</a></li>
+                                <li><a href="#" class="d-block">Newsletter</a></li>
+                                <li><a href="#" class="d-block">Privacy Policy</a></li>
+                            </ul>
+                        </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    <script>
+        function moveToSelected(element) {
+
+            if (element == "next") {
+                var selected = $(".selected").next();
+            } else if (element == "prev") {
+                var selected = $(".selected").prev();
+            } else {
+                var selected = element;
+            }
+
+            var next = $(selected).next();
+            var prev = $(selected).prev();
+            var prevSecond = $(prev).prev();
+            var nextSecond = $(next).next();
+
+            $(selected).removeClass().addClass("selected");
+
+            $(prev).removeClass().addClass("prev");
+            $(next).removeClass().addClass("next");
+
+            $(nextSecond).removeClass().addClass("nextRightSecond");
+            $(prevSecond).removeClass().addClass("prevLeftSecond");
+
+            $(nextSecond).nextAll().removeClass().addClass('hideRight');
+            $(prevSecond).prevAll().removeClass().addClass('hideLeft');
+
+        }
+
+        // Eventos teclado
+        $(document).keydown(function (e) {
+            switch (e.which) {
+                case 37: // left
+                    moveToSelected('prev');
+                    break;
+
+                case 39: // right
+                    moveToSelected('next');
+                    break;
+
+                default: return;
+            }
+            e.preventDefault();
+        });
+
+        $('#carousel div').click(function () {
+            moveToSelected($(this));
+        });
+
+        $('#prev').click(function () {
+            moveToSelected('prev');
+        });
+
+        $('#next').click(function () {
+            moveToSelected('next');
+        });
+    </script>
+        <!-- </div> -->
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+                integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+                integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
+        </script>
+    </body>
+</html>
